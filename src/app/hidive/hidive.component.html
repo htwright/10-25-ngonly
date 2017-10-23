@@ -1,0 +1,12 @@
+<p *ngIf="!TitleRows"><em>Loading...</em></p> 
+
+<div *ngFor="let row of TitleRows" class="container"> 
+ <div class="{{row.Name}}" > 
+   <h1>{{row.Name}}</h1> 
+   <div class="slides"> 
+       <carousel [arr]="row.Titles"></carousel> 
+        
+   </div> 
+ </div> 
+
+</div> 

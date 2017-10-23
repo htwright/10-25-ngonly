@@ -1,36 +1,13 @@
-<div id="#container">
-  <span>hello</span>
-  <div class="carousel">
-    <!-- <li *ngFor="let item of items">
-      <ngx-slick class="carousel" #slickModal="slick-modal">
-        <div ngxSlickItem class="slide">
-          <span>hello {{item.Name}}</span>
-        </div>
-      </ngx-slick>
-      <span>{{item.Name}}</span>
-    </li> -->
+<div *ngIf="items" id="#container"> 
+    <span>hello</span> 
+    <div class="carousel"> 
+      <ul> 
+        <ngx-slick class="carousel" #slickModal="slick-modal"> 
+          <li ngxSlickItem *ngFor="let item of items" class="slide"> 
+            <span>hello {{item.Name}}</span> 
+            <img src="{{item.KeyArtUrl}}">
+          </li> 
+        </ngx-slick> 
+      </ul> 
+    </div>    
   </div>
-<!-- <div ng2-carouselamos
-class="slides-wrapper"
-[items]="arr"
-[width]="1200"
-[$prev]="prev"
-[$next]="next"
-[$item]="item"
-></div>
-<ng-template #prev>
-  <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/26/nav-arrow-left-48.png" />
-</ng-template>
-
-<ng-template #next>
-  <img src="https://cdn0.iconfinder.com/data/icons/glyphpack/26/nav-arrow-right-48.png" />
-</ng-template>
-
-<ng-template #item let-item let-i="index">
-  <div class="items">
-    <span>{{item.Name}}</span>
-    <img src="{{item.MasterArtUrl}}">
-  </div>
-</ng-template> -->
-
-</div>

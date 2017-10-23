@@ -1,14 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core'; 
+import { HttpModule } from '@angular/http'; 
+import { CommonModule } from '@angular/common';
+ 
+import { SlickModule } from 'ngx-slick'; 
+import { AppComponent } from './app.component'; 
+import { CarouselComponent } from './carousel/carousel.component'; 
+import { NavmenuComponent } from './navmenu/navmenu.component'; 
+import { HidiveComponent } from './hidive/hidive.component'; 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    CarouselComponent, 
+    NavmenuComponent, 
+    HidiveComponent 
   ],
   imports: [
-    BrowserModule
+    CommonModule,
+    BrowserModule, 
+    HttpModule, 
+    SlickModule.forRoot() 
   ],
   providers: [],
   bootstrap: [AppComponent]
