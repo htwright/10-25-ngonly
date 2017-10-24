@@ -1,12 +1,10 @@
-<div *ngIf="items" id="#container"> 
-    <span>hello</span> 
+<div *ngIf="items" class="slickContainer"> 
     <div class="carousel"> 
       <ul> 
-        <ngx-slick class="carousel" #slickModal="slick-modal"> 
-          <li ngxSlickItem *ngFor="let item of items" class="slide"> 
-            <span>hello {{item.Name}}</span> 
-            <img src="{{item.KeyArtUrl}}">
-          </li> 
+        <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig"> 
+          <div ngxSlickItem *ngFor="let item of items" class="slide"> 
+            <img class="slide-img" src="{{item.KeyArtUrl}}" width="100%">
+          </div> 
         </ngx-slick> 
       </ul> 
     </div>    
